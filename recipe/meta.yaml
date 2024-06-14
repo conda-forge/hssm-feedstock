@@ -1,5 +1,5 @@
 {% set name = "hssm" %}
-{% set version = "0.2.1" %}
+{% set version = "0.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hssm-{{ version }}.tar.gz
-  sha256: 5065fb49f54112ab5082bb5e87ea90b0ce47d509fc8268aee67ee63e68a08b44
+  sha256: 463ddea1505abf98ef26df27895e2d4fc1a94649ce6757434e2e60238316f4e2
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
