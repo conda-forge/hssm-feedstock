@@ -35,8 +35,8 @@ test:
   imports:
     - hssm
   # Temporarily not doing pip check because jaxlib version on conda-forge lags behind jax version
-  # commands:
-  #   - pip check
+  commands:
+    - pip check
   requires:
     - pip
 
