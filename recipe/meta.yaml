@@ -1,5 +1,5 @@
 {% set name = "hssm" %}
-{% set version = "0.2.3" %}
+{% set version = "0.2.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hssm-{{ version }}.tar.gz
-  sha256: e20f327966ac0e378cbf5f45fac71760ba02740480ab8a614f7d69268aa7000b
+  sha256: 5bd1986da145942cf619e4cd7ccb0f00d59f20cc05780acdf531800e98c19dd1
 
 build:
   noarch: python
@@ -16,28 +16,27 @@ build:
 
 requirements:
   host:
-    - python >=3.10,<3.12
+    - python >=3.10,<=3.12
     - poetry-core
     - pip
   run:
-    - python >=3.10,<3.12
-    - pymc >=5.14
-    - arviz >=0.18.0
+    - python >=3.10,<=3.12
+    - pymc >=5.16.2,<5.17.0
+    - arviz >=0.19.0
     - onnx >=1.16.0,<2.0.0
     - jax >=0.4.25,<0.5.0
-    - ssm-simulators >=0.7.2,<0.8.0
-    - huggingface_hub >=0.23.0,<0.24.0
-    - onnxruntime >=1.15.0,<2.0.0
-    - bambi >=0.13.0,<0.14.0
-    - numpyro >=0.15.0,<0.16.0
+    - ssm-simulators >=0.7.5,<0.8.0
+    - huggingface_hub >=0.24.6,<0.25.0
+    - bambi >=0.14.0,<0.15.0
+    - numpyro >=0.15.2,<0.16.0
     - seaborn >=0.13.2,<0.14.0
     - hddm-wfpt >=0.1.4,<0.2.0
 test:
   imports:
     - hssm
   # Temporarily not doing pip check because jaxlib version on conda-forge lags behind jax version
-  # commands:
-  #   - pip check
+  commands:
+    - pip check
   requires:
     - pip
 
