@@ -1,13 +1,13 @@
 {% set name = "hssm" %}
-{% set version = "0.2.4" %}
+{% set version = "0.2.5" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hssm-{{ version }}.tar.gz
-  sha256: 5bd1986da145942cf619e4cd7ccb0f00d59f20cc05780acdf531800e98c19dd1
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/hssm-{{ version }}.tar.gz
+  sha256: 8689e3f361b1abcb6fcc6e66cc0d9d405d1ed50cbd3c1ec85bdd4ba1c3b62699
 
 build:
   noarch: python
