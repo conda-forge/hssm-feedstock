@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hssm-{{ version }}.tar.gz
-  sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  sha256: 8689e3f361b1abcb6fcc6e66cc0d9d405d1ed50cbd3c1ec85bdd4ba1c3b62699
 
 build:
   noarch: python
