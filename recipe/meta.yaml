@@ -28,7 +28,7 @@ requirements:
     - bambi >=0.15.0,<0.16.0
     - onnx >=1.16.0,<2.0.0
     - jax >=0.5.3
-    - ssm-simulators >=0.10.2
+    - ssm-simulators >=0.11.2
     - huggingface_hub >=0.25.0
     - numpyro >=0.17.0
     - seaborn >=0.13.2
