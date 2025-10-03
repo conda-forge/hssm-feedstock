@@ -1,6 +1,6 @@
 {% set python_min = "3.11" %}
 {% set name = "hssm" %}
-{% set version = "0.2.8" %}
+{% set version = "0.2.10" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/hssm-{{ version }}.tar.gz
-  sha256: 58820a7ce640176385803c368ef6e64263d47b7ee881750690ca9e80d17f6d88
+  sha256: 71519647ccbf7152d2040b794c9985bd918387368d67a7822011ab7be450a1d0
 
 build:
   noarch: python
@@ -23,18 +23,21 @@ requirements:
   run:
     - python >={{ python_min }},<3.13a0
     - numpy >=2.0.0
-    - pymc >=5.21.0
-    - arviz >=0.19.0
+    - pymc >=5.25.0
+    - arviz >=0.22.0
     - bambi >=0.15.0,<0.16.0
-    - onnx >=1.16.0,<2.0.0
+    - onnx >=1.16.0
     - jax >=0.5.3
-    - ssm-simulators >=0.10.2
-    - huggingface_hub >=0.25.0
-    - numpyro >=0.17.0
+    - ssm-simulators >=0.11.2
+    - huggingface_hub >=0.34.0
+    - numpyro >=0.19.0
     - seaborn >=0.13.2
     - hddm-wfpt >=0.1.5
     - cloudpickle >=3.0.0
     - tqdm >=4.66.0
+    - absl-py
+    - jaxonnxruntime >=0.3.0
+
 test:
   imports:
     - hssm
