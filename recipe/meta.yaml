@@ -1,6 +1,6 @@
 {% set python_min = "3.11" %}
 {% set name = "hssm" %}
-{% set version = "0.2.10" %}
+{% set version = "0.2.11" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/hssm-{{ version }}.tar.gz
-  sha256: 71519647ccbf7152d2040b794c9985bd918387368d67a7822011ab7be450a1d0
+  sha256: 4a4c570e9dad0afae66b5cfced444baba94e8182ae8756d5ec24fb1010be6c71
 
 build:
   noarch: python
